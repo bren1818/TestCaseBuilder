@@ -87,7 +87,13 @@
 			<label for="tid">Test Case ID:*</label>
 		</div>
 		<div class="rowField">
-			<input type="text" name="tid" id="tid" value="<?php echo (isset($testcase) ?  $testcase->getTid() : ''); ?>"  title="Test Case ID is a required field. " required="required"/>
+			<input type="text" name="tid" id="tid" value="CSWT<?php
+				$nid = $conn->query("SELECT Auto_increment FROM information_schema.tables WHERE table_name='testcase' AND table_schema='testcase';");
+				if( $nid->execute() ){
+					$nid = $nid->fetch();
+					echo  str_pad($nid[0],3, "0",STR_PAD_LEFT);
+				}
+			?>"  title="Test Case ID is a required field. " required="required"/>
 		</div>
 	</div>
 	<div class="formRow">
@@ -148,6 +154,8 @@
 		</div>
 	</div>
 	<div class="formRow rowCenter">
+	<br />
+	<br />
 		<input class="button" type="submit" value="Save" /> <a href="TestcaseAdmin.php">Cancel</a>
 	</div>
 </form>

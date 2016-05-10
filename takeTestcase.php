@@ -91,9 +91,40 @@
 	}
 	if( $showForm == 1){
 ?>
+<style>
+	@-ms-keyframes wiggle{0%{-ms-transform:rotate(3deg);}50%{-ms-transform:rotate(-3deg);}100%{-ms-transform:rotate(3deg);}}
+	@-moz-keyframes wiggle{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
+	@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
+	@keyframes wiggle{0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}}
+	
+	
+
+	td{vertical-align: top; padding: 10px;}
+	td img{ max-width: 100%; cursor: pointer; }
+	td img:hover{-ms-animation:wiggle .3s 2;-moz-animation:wiggle .3s 2;-webkit-animation:wiggle .3s 2;animation:wiggle .3s 2;}
+	
+	td.testStep,
+	td.expectedResult,
+	td.notes{
+		width: 450px;
+		max-width:450px;
+	}
+	
+	td.result{ width: 100px; max-width: 100px;}
+	td.stepNum{ width: 50px; max-width: 50px;}
+	
+	
+</style>
 <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
 
-<h3>In Progress</h3>
+<script>
+$(function(){
+	$('td img').click(function(){
+		window.open( $(this).attr('src') );
+		
+	});
+});	
+</script>
 
 <form name="modifyTestcase" id="modifyTestcase" method="POST" action="submitTestcase.php" enctype="multipart/form-data">
 	<div class="formRow">
@@ -156,10 +187,10 @@
 	</div>
 	<div class="formRow">
 		<div class="rowLabel">
-			<label for="name">Name:</label>
+			<label for="name">Your Name:</label>
 		</div>
 		<div class="rowField">
-			<input type="text" name="name" />
+			<input type="text" name="name" required/>
 		</div>
 	</div>	
 	<div class="formRow">
@@ -167,7 +198,7 @@
 			<label for="comments">Comments:</label>
 		</div>
 		<div class="rowField">
-			<textarea class="wysiwyg"  name="comments" id="comments"  title="" disabled><?php echo (isset($testcase) ?  $testcase->getComments() : ''); ?></textarea>
+			<?php echo (isset($testcase) ?  $testcase->getComments() : ''); ?>
 		</div>
 	</div>
 	<div class="formRow rowCenter">	<br /> <br />
