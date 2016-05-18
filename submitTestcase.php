@@ -23,7 +23,7 @@
 		$failCount = 0;
 		
 		
-		$paragraphs = "<table><tr><th>Step</th><th>Regression</th><th>Expected</th><th>Pass/Fail</th><th>Notes</th></tr>";
+		$paragraphs = "<table><tr><th class='stepNum'>Step</th><th class='testStep'>Test Step</th><th class='expectedResult'>Expected Result</th><th class='result'>Result</th><th class='notes'>Notes</th></tr>";
 
 
 		
@@ -40,7 +40,7 @@
 				$step = $step->load ( $_POST['stepsID'][$x] );
 				
 
-				$paragraphs .= "<tr><td>".$step->getStep()."</td><td>".$step->getRegression()."</td><td>".$step->getResult()."</td><td>". $_POST['pass'][$x]."</td><td>".$_POST['notes'][$x]."</td></tr>";	
+				$paragraphs .= "<tr><td class='stepNum'>".$step->getStep()."</td><td class='testStep'>".$step->getRegression()."</td><td class='expectedResult'>".$step->getResult()."</td><td class='result'>". $_POST['pass'][$x]."</td><td  class='notes'>".$_POST['notes'][$x]."</td></tr>";	
 				
 			}
 		}
@@ -50,14 +50,19 @@
 		
 		$paragraphs .= "</table>";
 		
-		$headers = "From: birwin@wlu.ca;\r\n";
+		$headers = "From: TestCaseAdmin@wlu.ca;\r\n";
 		$headers .= "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 		
+		$serverURL = "http://205.189.21.88:81/";
+		
 		$message = '<html><body>';
+		
+		$message .= '<style>td.testStep, td.expectedResult, td.notes{ width: 450px; max-width:450px; } td.result{ width: 100px; max-width: 100px;}	td.stepNum{ width: 50px; max-width: 50px;} table, table td{ border: 1px solid #000; }</style>';
+		
 		$message .= '<h1>Test Submission - '.(isset($testcase) ?  $testcase->getTid() : '').'</h1>';
 		$message .= '<p><b>Test Description:</b> '.(isset($testcase) ?  $testcase->getDescription() : '').'</p>';
-		$message .= '<p><b>Test %</b> '.(($passCount/$total) * 100).'</p>';
+		$message .= '<p><b>Test %</b> '.round ( ( ($passCount/$total) * 100), 2).'</p>';
 		$message .= '<p><b>Test Taken by:</b> '.$_POST['name'].'</p>';
 		$message .= '<p><b>Passed:</b> '.$passCount.'</p>';
 		$message .= '<p><b>Failed:</b> '.$failCount.'</p>';
@@ -66,10 +71,10 @@
 		
 		$message .= '<p>Completed on: '.date("Y-m-d H:i:s").'</p>';
 		
-		$message .= '</body></html>';
 		
 		
-		$to = "dawilliams@wlu.ca";
+		
+		$to = "dawilliams@wlu.ca";//dawilliams
 		$subject = "Test Case submission of: ".(isset($testcase) ?  $testcase->getTid() : '').' by: '.$_POST['name'];
 		
 		$query = $conn->prepare("SELECT COUNT(`id`) as `cnt` FROM `testresult` WHERE `testresult`.`testID` = :ID");
@@ -89,18 +94,28 @@
 		$Testresult->setPass( $passCount );
 		$Testresult->setFail( $failCount );
 		$Testresult->setTaker( $_POST['name'] );
-		$Testresult->setHtml($message);
+		$Testresult->setHtml($message.'</body></html>');
 
+		if( $Testresult->save() ){
+				echo "<p>Your result was recorded.</p>";
+		}
+		
+		$message .= '<p><a href="'.$serverURL.'modifyTestresult.php?testresultID='.$Testresult->getId().'">View this submission</a> or go to '.$serverURL.'modifyTestresult.php?testresultID='.$Testresult->getId().'</p>';
+		$message .= '</body></html>';
+		
+		
 		if( $failCount > 0){
 			if( mail($to,$subject,$message,$headers) ){
 				echo "<h1>Thank you for the submission...</h1>";
 				//echo '<pre>'.print_r($_POST, true).'</pre>';
 			}
+		}else{
+			if( mail($to,$subject,"<html><body><p>Test passed every scenario</p></body></html>",$headers) ){
+				echo "<h1>Thank you for the submission...</h1>";
+			}
 		}
 		
-		if( $Testresult->save() ){
-				echo "<p>Your result was recorded.</p>";
-		}
+		
 		
 	}else{
 		//

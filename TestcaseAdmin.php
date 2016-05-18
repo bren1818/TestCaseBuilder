@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css" />
 <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 
-
+<!--
 <p><a href="createTestcase.php">Create New Testcase</a></p>
-
+-->
 <h1>Available Tests</h1>
 <fieldset>
 
@@ -24,7 +24,7 @@
 
 				<tr>
 
-					<th>ID</th><th>Test Case ID</th><th>Description</th><th>Author</th><th>Requirements</th><th>Comments</th>
+					<th>ID</th><th>Test Case ID</th><th>Description</th><th>Author</th><th>Requirements</th>
 
 					<th>Controls</th>
 
@@ -48,7 +48,7 @@
 
 				<tr>
 
-					<th>ID</th><th>Test Case ID</th><th>Description</th><th>Author</th><th>Requirements</th><th>Comments</th>
+					<th>ID</th><th>Test Case ID</th><th>Description</th><th>Author</th><th>Requirements</th>
 
 					<th>Controls</th>
 

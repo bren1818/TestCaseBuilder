@@ -32,6 +32,7 @@
 		$testresult = $testresult->load( $testresultID );
 
 		if( $testresult->getID() > 0 ){
+			
 		}else{
 			$showForm = 0;
 			echo "<p>Could not load Testresult with ID of ".$testresultID."</p>";
@@ -39,6 +40,34 @@
 	}
 	if( $showForm == 1){
 ?>
+
+<style>
+	table, table td{ border: 1px solid #000; }
+
+	@-ms-keyframes wiggle{0%{-ms-transform:rotate(3deg);}50%{-ms-transform:rotate(-3deg);}100%{-ms-transform:rotate(3deg);}}
+	@-moz-keyframes wiggle{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
+	@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
+	@keyframes wiggle{0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}}
+	
+	
+
+	td{vertical-align: top; padding: 10px;}
+	td img{ max-width: 100%; cursor: pointer; }
+	td img:hover{-ms-animation:wiggle .3s 2;-moz-animation:wiggle .3s 2;-webkit-animation:wiggle .3s 2;animation:wiggle .3s 2;}
+	
+	td.testStep,
+	td.expectedResult,
+	td.notes{
+		width: 450px;
+		max-width:450px;
+	}
+	
+	td.result{ width: 100px; max-width: 100px;}
+	td.stepNum{ width: 50px; max-width: 50px;}
+	
+	
+</style>
+
 <form name="modifyTestresult" id="modifyTestresult" method="POST" action="modifyTestresult.php" enctype="multipart/form-data">
 	<div class="formRow">
 		<div class="rowLabel">
@@ -98,7 +127,7 @@
 		<input type="hidden" name="testresultID" value="<?php echo $testresult->getID(); ?>" /> <input class="button" type="submit" value="Update" /> 
 	-->	
 	
-	<a href="TestresultAdmin.php">Go Back</a>
+	<a href="TestresultAdmin.php">Go Back</a> | <a href="http://205.189.21.88:81/deleteTestresult.php?testresultID=<?php  echo $testresult->getID(); ?>">Delete</a>
 	
 	</div>
 </form>

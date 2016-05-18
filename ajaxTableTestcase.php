@@ -84,9 +84,9 @@ ajaxTableTestcase.php
 
 				break;
 
-				case 5:
+				//case 5:
 
-					$orderBy = "`comments`";
+					//$orderBy = "`comments`";
 
 				break;
 
@@ -103,10 +103,10 @@ ajaxTableTestcase.php
 			$orderBy = "`id`";
 
 		}
-
+//,`comments`
 		$query = "SELECT `id`,
 
-			`tid`,`description`,`applicable`,`requirements`,`comments`
+			`tid`,`description`,`applicable`,`requirements`
 
 		FROM
 
@@ -144,7 +144,7 @@ ajaxTableTestcase.php
 
 		$data[] =  array(
 
-			$row["id"], $row["tid"], $row["description"], $row["applicable"], $row["requirements"], $row["comments"], "<!--[ <a href='modifyTestcase.php?testcaseID=$id'>Modify</a><a href='deleteTestcase.php?testcaseID=$id'>Delete</a>]--> <a href='takeTestcase.php?testcaseID=$id'>TAKE TEST</a>"
+			$row["id"], $row["tid"], $row["description"], $row["applicable"], $row["requirements"],  "<a href='takeTestcase.php?testcaseID=$id'>TAKE TEST</a>"
 
 		);
 

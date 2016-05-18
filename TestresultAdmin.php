@@ -11,8 +11,11 @@
 <script src="//cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script>
 
 
-<!--<p><a href="createTestresult.php">Create New Testresult</a></p>-->
-<p><a href="TestcaseAdmin.php">See Available Tests</a></p>
+<!--<p><a href="createTestresult.php">Create New Testresult</a></p>
+<p><a href="TestcaseAdmin.php">See Available Tests</a></p>-->
+
+<h1>Test Results</h1>
+
 <fieldset>
 
 	<legend>Testresult</legend>

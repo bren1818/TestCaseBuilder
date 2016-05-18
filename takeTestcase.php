@@ -120,8 +120,7 @@
 <script>
 $(function(){
 	$('td img').click(function(){
-		window.open( $(this).attr('src') );
-		
+		window.open( $(this).attr('src') );	
 	});
 });	
 </script>
