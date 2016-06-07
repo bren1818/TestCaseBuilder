@@ -24,6 +24,8 @@
 			if( is_array($_POST['step']) ){
 				//many options
 				for($x=0; $x < sizeof( $_POST['step'] ); $x++){
+					//$conn = getConnection();
+					// $conn->setAttribute(PDO::ATTR_TIMEOUT, 300); 
 					$steps = new Steps($conn);
 					$steps->setID(  		$_POST['stepsID'][$x]		);
 					$steps->setStep(		$_POST['step'][$x]			);
@@ -79,9 +81,11 @@
 	if( $showForm == 1){
 ?>
 <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+<style>
+td{ vertical-align: top; }
+</style>
 
-
-<form name="createTestcase" id="createTestcase" method="POST" action="createTestcase.php" enctype="multipart/form-data">
+<form name="createTestcase" id="createTestcase" method="POST" action="createTestcase.php" enctype="multipart/form-data" novalidate>
 	<div class="formRow">
 		<div class="rowLabel">
 			<label for="tid">Test Case ID:*</label>

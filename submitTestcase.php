@@ -70,11 +70,13 @@
 		$message .=  $paragraphs;
 		
 		$message .= '<p>Completed on: '.date("Y-m-d H:i:s").'</p>';
+		$message .= '<p>Device : '.$_POST['device'].'</p>';
+		$message .= '<p>Browser: '.$_POST['browser'].'</p>';
 		
 		
 		
 		
-		$to = "dawilliams@wlu.ca";//dawilliams
+		$to = "dawilliams@wlu.ca, birwin@wlu.ca";//dawilliams
 		$subject = "Test Case submission of: ".(isset($testcase) ?  $testcase->getTid() : '').' by: '.$_POST['name'];
 		
 		$query = $conn->prepare("SELECT COUNT(`id`) as `cnt` FROM `testresult` WHERE `testresult`.`testID` = :ID");
@@ -84,17 +86,31 @@
 			$result = $query->fetchAll();
 			
 			$result = $result[0]["cnt"];
+		}else{
+			$result = 1;
 		}
 		
 		
 
 		$Testresult->setTestID( $testcase->getId() );
+		
+		$Testresult->setBrowser( $_POST['browser']  );
+		$Testresult->setDevice( $_POST['device'] );
+		
+		
 		$Testresult->setTestName( $testcase->getTid()."-".$result ); 
 		$Testresult->setTestNum( $result );
 		$Testresult->setPass( $passCount );
 		$Testresult->setFail( $failCount );
 		$Testresult->setTaker( $_POST['name'] );
 		$Testresult->setHtml($message.'</body></html>');
+		
+		
+		
+		//add device
+		//add browser
+		
+		
 
 		if( $Testresult->save() ){
 				echo "<p>Your result was recorded.</p>";

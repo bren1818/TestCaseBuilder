@@ -96,6 +96,18 @@ ajaxTableTestresult.php
 
 				break;
 
+				case 7:
+
+					$orderBy = "`browser`";
+
+				break;
+
+				case 8:
+
+					$orderBy = "`device`";
+
+				break;
+
 				default:
 
 					$orderBy = "`id`";
@@ -112,7 +124,7 @@ ajaxTableTestresult.php
 
 		$query = "SELECT `id`,
 
-			`testID`,`testName`,`testNum`,`pass`,`fail`,`taker`
+			`testID`,`testName`,`testNum`,`pass`,`fail`,`taker`,`browser`,`device`
 
 		FROM
 
@@ -120,7 +132,7 @@ ajaxTableTestresult.php
 
 		WHERE
 
-			".( $search != "" ? " (`testID` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`taker` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`html` ".($search != "" ? " LIKE :SEARCH" : "").")" : " 1 ") ."
+			".( $search != "" ? " (`testName` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`testNum` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`taker` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`html` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`browser` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`device` ".($search != "" ? " LIKE :SEARCH" : "").")" : " 1 ") ."
 
 		ORDER BY
 
@@ -150,7 +162,7 @@ ajaxTableTestresult.php
 
 		$data[] =  array(
 
-			$row["id"], $row["testID"], $row["testName"], $row["testNum"], $row["pass"], $row["fail"], $row["taker"], "<a href='modifyTestresult.php?testresultID=$id'>View</a>   <a href='deleteTestresult.php?testresultID=$id'>Delete</a>"
+			$row["id"], $row["testID"], $row["testName"], $row["testNum"], $row["pass"], $row["fail"], $row["taker"], $row["browser"], $row["device"], "<a href='modifyTestresult.php?testresultID=$id'>Modify</a><a href='deleteTestresult.php?testresultID=$id'>Delete</a>"
 
 		);
 

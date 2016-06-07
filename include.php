@@ -13,6 +13,7 @@
 						try {
 							$dbc = new PDO('mysql:host='.$dbHost.';dbname='.$dbName, $dbUser, $dbPass);
 							$dbc->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+							// $dbc->setAttribute(PDO::ATTR_TIMEOUT, 300); 
 						}
 						catch(PDOException $e) {
 							echo "<h2>An error has occurred connecting to the database</h2>";

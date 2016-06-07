@@ -16,7 +16,7 @@
 	$showForm = 1;
 	if(strtoupper($_SERVER["REQUEST_METHOD"]) === "POST") {
 		
-		echo "Sorry this needs to be done. Just keep making the tests for now...";
+		echo "Sorry editting Test was not completed... Just keep making the tests for now...";
 		
 		//check if there is a NEW ID for save or if one exists!!!!!!
 		//taker 
@@ -128,25 +128,26 @@ $(function(){
 <form name="modifyTestcase" id="modifyTestcase" method="POST" action="submitTestcase.php" enctype="multipart/form-data">
 	<div class="formRow">
 		<div class="rowLabel">
-			<label for="tid">Test Case ID:*</label>
+			<label for="tid"><b>Test Case ID:*</b></label>
 		</div>
 		<div class="rowField">
-			<input type="text" name="tid" id="tid" value="<?php echo (isset($testcase) ?  $testcase->getTid() : ''); ?>"  title="Test Case ID is a required field. " required="required" disabled/>
+			<?php echo (isset($testcase) ?  $testcase->getTid() : ''); ?>
 			
 			<!-- GET INSTANCE # -->
 		</div>
 	</div>
 	<div class="formRow">
 		<div class="rowLabel">
-			<label for="description">Description:</label>
+			<label for="description"><b>Description:</b></label>
 		</div>
 		<div class="rowField">
-			<textarea class="wysiwyg"  name="description" id="description"  title="" disabled><?php echo (isset($testcase) ?  $testcase->getDescription() : ''); ?></textarea>
+			<?php echo (isset($testcase) ?  $testcase->getDescription() : ''); ?>
 		</div>
 	</div>
+	<!--
 	<div class="formRow">
 		<div class="rowLabel">
-			<label for="applicable">Applicable For:</label>
+			<label for="applicable">Test By:</label>
 		</div>
 		<div class="rowField">
 			<input type="text" name="applicable" id="applicable" value="<?php echo (isset($testcase) ?  $testcase->getApplicable() : ''); ?>"  title="" disabled/>
@@ -160,6 +161,7 @@ $(function(){
 			<input type="text" name="requirements" id="requirements" value="<?php echo (isset($testcase) ?  $testcase->getRequirements() : ''); ?>"  title="" disabled/>
 		</div>
 	</div>
+	-->
 	<div class="formRow">
 		<div class="rowLabel">
 			<label for="steps">Steps:</label>
@@ -184,6 +186,9 @@ $(function(){
 			
 		</div>
 	</div>
+	
+	<br /><br /><br />
+	
 	<div class="formRow">
 		<div class="rowLabel">
 			<label for="name">Your Name:</label>
@@ -192,6 +197,27 @@ $(function(){
 			<input type="text" name="name" required/>
 		</div>
 	</div>	
+	
+	<div class="formRow">
+		<div class="rowLabel">
+			<label for="name">Browser:</label>
+		</div>
+		<div class="rowField">
+			<input type="text" name="browser" placeholder="Chrome, Safari, IE, Firefox..." required/>
+		</div>
+	</div>	
+	
+	<div class="formRow">
+		<div class="rowLabel">
+			<label for="name">Device:</label>
+		</div>
+		<div class="rowField">
+			<input type="text" name="device" placeholder="Android, iPhone, El Capitan, Win 10... " required/>
+		</div>
+	</div>	
+	
+	
+	<!--
 	<div class="formRow">
 		<div class="rowLabel">
 			<label for="comments">Comments:</label>
@@ -200,13 +226,11 @@ $(function(){
 			<?php echo (isset($testcase) ?  $testcase->getComments() : ''); ?>
 		</div>
 	</div>
+	-->
 	<div class="formRow rowCenter">	<br /> <br />
 		<input type="hidden" name="testcaseID" value="<?php echo $testcase->getID(); ?>" /> 
 		
-		<input class="button" type="submit" value="Submit Findings" /> 
-		
-		
-		<a href="TestcaseAdmin.php">Cancel</a>
+		<input class="button" type="submit" value="Submit Findings" />&nbsp;&nbsp;&nbsp;&nbsp;<a href="TestcaseAdmin.php">Cancel</a>
 	</div>
 
 </form>

@@ -7,7 +7,7 @@
 
 	Load Config String:
 
-	{"mode":"form","keys":"%5B%7B%22name%22:%22testID%22,%22label%22:%22Test%20ID%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:false%7D,%7B%22name%22:%22testName%22,%22label%22:%22Test%20Name%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:true%7D,%7B%22name%22:%22testNum%22,%22label%22:%22Test%20Number%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:true%7D,%7B%22name%22:%22pass%22,%22label%22:%22Pass%20Count%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:false%7D,%7B%22name%22:%22fail%22,%22label%22:%22Fail%20Count%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:false%7D,%7B%22name%22:%22taker%22,%22label%22:%22Test%20Taker%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:true%7D,%7B%22name%22:%22html%22,%22label%22:%22HTML%22,%22type%22:%22textarea%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:false,%22useQuery%22:true%7D,%7B%22name%22:%22browser%22,%22label%22:%22Browser%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:true%7D,%7B%22name%22:%22device%22,%22label%22:%22Device%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:true%7D%5D","classname":"testResult","listBy":true,"getBy":true,"buildCRUD":"undefined","headerfooter":"undefined","buildAjax":"undefined","defaultSize":"90"}
+	{"mode":"form","keys":"%5B%7B%22name%22:%22testID%22,%22label%22:%22Test%20ID%22,%22type%22:%22text%22,%22required%22:true,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:true%7D,%7B%22name%22:%22testName%22,%22label%22:%22Test%20Name%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:false%7D,%7B%22name%22:%22testNum%22,%22label%22:%22test%20Number%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:false%7D,%7B%22name%22:%22pass%22,%22label%22:%22Pass%20Count%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:false%7D,%7B%22name%22:%22fail%22,%22label%22:%22Fail%20Count%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:false%7D,%7B%22name%22:%22taker%22,%22label%22:%22Test%20Taker%22,%22type%22:%22text%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:true,%22useQuery%22:true%7D,%7B%22name%22:%22html%22,%22label%22:%22HTML%22,%22type%22:%22textarea%22,%22required%22:false,%22errText%22:%22%22,%22placeHolder%22:%22%22,%22chkRestrictDates%22:false,%22startYr%22:%220%22,%22frmYr%22:%220%22,%22to%22:%220%22,%22restrictLength%22:false,%22min_length%22:%220%22,%22max_length%22:%2245%22,%22restrictAmount%22:false,%22min_amount%22:%220%22,%22max_amount%22:%220%22,%22listType%22:%22textarea%22,%22list%22:%22%22,%22pattern%22:%22undefined%22,%22listObjectName%22:%22%22,%22listObjectKeyFunction%22:%22%22,%22listObjectTitleFunction%22:%22%22,%22showAdmin%22:false,%22useQuery%22:true%7D%5D","classname":"testResult","listBy":true,"getBy":true,"buildCRUD":"undefined","buildAjax":"undefined","defaultSize":"45"}
 
 */
 
@@ -23,8 +23,6 @@
 		private $fail;
 		private $taker;
 		private $html;
-		private $browser;
-		private $device;
 
 
 		/*Constructor*/
@@ -121,22 +119,6 @@
 			$this->html = $html;
 		}
 
-		function getBrowser(){
-			return $this->browser;
-		}
-
-		function setBrowser($browser){
-			$this->browser = $browser;
-		}
-
-		function getDevice(){
-			return $this->device;
-		}
-
-		function setDevice($device){
-			$this->device = $device;
-		}
-
 		/*Special Functions*/
 		function load($id = null){
 			if( $this->connection ){
@@ -167,8 +149,6 @@
 			$this->setFail( (isset($_POST["fail"])) ? $_POST["fail"] : $this->getFail() );
 			$this->setTaker( (isset($_POST["taker"])) ? $_POST["taker"] : $this->getTaker() );
 			$this->setHtml( (isset($_POST["html"])) ? $_POST["html"] : $this->getHtml() );
-			$this->setBrowser( (isset($_POST["browser"])) ? $_POST["browser"] : $this->getBrowser() );
-			$this->setDevice( (isset($_POST["device"])) ? $_POST["device"] : $this->getDevice() );
 		}
 
 		function getFromRequest(){
@@ -179,8 +159,6 @@
 			$this->setFail( (isset($_REQUEST["fail"])) ? $_REQUEST["fail"] : $this->getFail() );
 			$this->setTaker( (isset($_REQUEST["taker"])) ? $_REQUEST["taker"] : $this->getTaker() );
 			$this->setHtml( (isset($_REQUEST["html"])) ? $_REQUEST["html"] : $this->getHtml() );
-			$this->setBrowser( (isset($_REQUEST["browser"])) ? $_REQUEST["browser"] : $this->getBrowser() );
-			$this->setDevice( (isset($_REQUEST["device"])) ? $_REQUEST["device"] : $this->getDevice() );
 		}
 
 		function getFromArray($arr){
@@ -191,8 +169,6 @@
 			$this->setFail( (isset($arr["fail"])) ? $arr["fail"] : $this->getFail() );
 			$this->setTaker( (isset($arr["taker"])) ? $arr["taker"] : $this->getTaker() );
 			$this->setHtml( (isset($arr["html"])) ? $arr["html"] : $this->getHtml() );
-			$this->setBrowser( (isset($arr["browser"])) ? $arr["browser"] : $this->getBrowser() );
-			$this->setDevice( (isset($arr["device"])) ? $arr["device"] : $this->getDevice() );
 		}
 
 		function compareTo($testresult){
@@ -252,16 +228,6 @@
 			}else{
 				$log["Html"] = "un-modified";
 			}
-			if($this->getBrowser() != $testresult->getBrowser() ){
-				$log["Browser"] = "modified";
-			}else{
-				$log["Browser"] = "un-modified";
-			}
-			if($this->getDevice() != $testresult->getDevice() ){
-				$log["Device"] = "modified";
-			}else{
-				$log["Device"] = "un-modified";
-			}
 		return $log;
 		}
 
@@ -274,12 +240,10 @@
 			$fail = $this->getFail();
 			$taker = $this->getTaker();
 			$html = $this->getHtml();
-			$browser = $this->getBrowser();
-			$device = $this->getDevice();
 			if( $this->connection ){
 				if( $id != "" ){
 					/*Perform Update Operation*/
-					$query = $this->connection->prepare("UPDATE  `testresult` SET `testID` = :testID ,`testName` = :testName ,`testNum` = :testNum ,`pass` = :pass ,`fail` = :fail ,`taker` = :taker ,`html` = :html ,`browser` = :browser ,`device` = :device WHERE `id` = :id");
+					$query = $this->connection->prepare("UPDATE  `testresult` SET `testID` = :testID ,`testName` = :testName ,`testNum` = :testNum ,`pass` = :pass ,`fail` = :fail ,`taker` = :taker ,`html` = :html WHERE `id` = :id");
 					$query->bindParam('testID', $testID);
 					$query->bindParam('testName', $testName);
 					$query->bindParam('testNum', $testNum);
@@ -287,8 +251,6 @@
 					$query->bindParam('fail', $fail);
 					$query->bindParam('taker', $taker);
 					$query->bindParam('html', $html);
-					$query->bindParam('browser', $browser);
-					$query->bindParam('device', $device);
 					$query->bindParam('id', $id);
 					if( $query->execute() ){
 						return $id;
@@ -298,7 +260,7 @@
 
 				}else{
 					/*Perform Insert Operation*/
-					$query = $this->connection->prepare("INSERT INTO `testresult` (`id`,`testID`,`testName`,`testNum`,`pass`,`fail`,`taker`,`html`,`browser`,`device`) VALUES (NULL,:testID,:testName,:testNum,:pass,:fail,:taker,:html,:browser,:device);");
+					$query = $this->connection->prepare("INSERT INTO `testresult` (`id`,`testID`,`testName`,`testNum`,`pass`,`fail`,`taker`,`html`) VALUES (NULL,:testID,:testName,:testNum,:pass,:fail,:taker,:html);");
 					$query->bindParam(':testID', $testID);
 					$query->bindParam(':testName', $testName);
 					$query->bindParam(':testNum', $testNum);
@@ -306,8 +268,6 @@
 					$query->bindParam(':fail', $fail);
 					$query->bindParam(':taker', $taker);
 					$query->bindParam(':html', $html);
-					$query->bindParam(':browser', $browser);
-					$query->bindParam(':device', $device);
 
 					if( $query->execute() ){
 						$this->setId( $this->connection->lastInsertId() );
@@ -523,52 +483,6 @@
 			}
 		}
 
-		function getByBrowser($browser){
-			if( $this->connection ){
-				if( $browser == null && $this->getBrowser() != ""){
-					$browser = $this->getBrowser();
-				}
-
-				/*Perform Query*/
-				$query = $this->connection->prepare("SELECT * FROM `testresult` WHERE `browser` = :browser LIMIT 1");
-				$query->bindParam(':browser', $browser);
-				$object = null;
-
-				if( $query->execute() ){
-					while( $result = $query->fetchObject("testresult") ){
-						$object = $result;
-					}
-
-				}
-				if( is_object( $object ) ){
-					return $object;
-				}
-			}
-		}
-
-		function getByDevice($device){
-			if( $this->connection ){
-				if( $device == null && $this->getDevice() != ""){
-					$device = $this->getDevice();
-				}
-
-				/*Perform Query*/
-				$query = $this->connection->prepare("SELECT * FROM `testresult` WHERE `device` = :device LIMIT 1");
-				$query->bindParam(':device', $device);
-				$object = null;
-
-				if( $query->execute() ){
-					while( $result = $query->fetchObject("testresult") ){
-						$object = $result;
-					}
-
-				}
-				if( is_object( $object ) ){
-					return $object;
-				}
-			}
-		}
-
 
 		function getListById($id=null){
 			if( $this->connection ){
@@ -747,54 +661,6 @@
 				/*Perform Query*/
 				$query = $this->connection->prepare("SELECT * FROM `testresult` WHERE `html` = :html");
 				$query->bindParam(':html', $html);
-
-				if( $query->execute() ){
-					while( $result = $query->fetchObject("testresult") ){
-						$testresults[] = $result;
-					}
-					if( is_array( $testresults ) ){
-						return $testresults;
-					}else{
-						return array();
-					}
-
-				}
-			}
-		}
-
-		function getListByBrowser($browser=null){
-			if( $this->connection ){
-				if( $browser == null && $this->getBrowser() != ""){
-					$browser = $this->getBrowser();
-				}
-
-				/*Perform Query*/
-				$query = $this->connection->prepare("SELECT * FROM `testresult` WHERE `browser` = :browser");
-				$query->bindParam(':browser', $browser);
-
-				if( $query->execute() ){
-					while( $result = $query->fetchObject("testresult") ){
-						$testresults[] = $result;
-					}
-					if( is_array( $testresults ) ){
-						return $testresults;
-					}else{
-						return array();
-					}
-
-				}
-			}
-		}
-
-		function getListByDevice($device=null){
-			if( $this->connection ){
-				if( $device == null && $this->getDevice() != ""){
-					$device = $this->getDevice();
-				}
-
-				/*Perform Query*/
-				$query = $this->connection->prepare("SELECT * FROM `testresult` WHERE `device` = :device");
-				$query->bindParam(':device', $device);
 
 				if( $query->execute() ){
 					while( $result = $query->fetchObject("testresult") ){
