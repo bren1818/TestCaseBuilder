@@ -81,6 +81,9 @@
 	if( $showForm == 1){
 ?>
 <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+
+
 <style>
 td{ vertical-align: top; }
 </style>
@@ -184,7 +187,13 @@ td{ vertical-align: top; }
 					var d = new Date();
 					var n = d.getMilliseconds();
 					$(this).attr('id', 'ta_' + n );
-					tinymce.init({ selector: 'textarea#ta_' + n });
+					tinymce.init({ selector: 'textarea#ta_' + n, plugins: [
+        "image paste"
+       // "searchreplace visualblocks",
+      //  "insertdatetime media contextmenu "
+    ],
+   // convert_urls: false,
+    paste_data_images: true });
 					
 				});
 				
@@ -193,10 +202,43 @@ td{ vertical-align: top; }
 		
 		});
 	});
-	tinymce.init({ selector:'textarea' });
+	
+	tinymce.init({ selector:'textarea', plugins: [
+        "image paste"
+    ],
+    paste_data_images: true});
 	
 	
 </script>
+<!--
+<script>
+var IMAGE_MIME_REGEX = /^image\/(p?jpeg|gif|png)$/i;
 
+var loadImage = function (file) {
+    var reader = new FileReader();
+    reader.onload = function(e){
+        var img = document.createElement('img');
+        img.src = e.target.result;
+        
+        var range = window.getSelection().getRangeAt(0);
+        range.deleteContents();
+        range.insertNode(img);
+    };
+    reader.readAsDataURL(file);
+};
 
+document.onpaste = function(e){
+    var items = e.clipboardData.items;
+	console.log("here");
+    for (var i = 0; i < items.length; i++) {
+        if (IMAGE_MIME_REGEX.test(items[i].type)) {
+            loadImage(items[i].getAsFile());
+            return;
+        }
+    }
+    
+    // Normal paste handling here
+}
+</script>
+-->
 <?php } ?>
