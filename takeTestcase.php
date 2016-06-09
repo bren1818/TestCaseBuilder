@@ -264,7 +264,10 @@ $(function(){
 		var n = Date.now();
 		var r = Math.floor((Math.random() * 100) + 1)
 		$(this).attr('id', 'ta_' + n + r );
-		tinymce.init({ selector: 'textarea#ta_' + n + r });
+		tinymce.init({ selector: 'textarea#ta_' + n + r,  plugins: [
+        "image paste"
+    ],
+    paste_data_images: true });
 	});
 	
 	
