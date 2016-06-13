@@ -122,7 +122,7 @@ ajaxTableTestresult.php
 
 		WHERE
 
-			".( $search != "" ? " (`testName` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`taker` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`html` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`browser` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`device` ".($search != "" ? " LIKE :SEARCH" : "").")" : " 1 ") ." AND `fail` > 0
+			".( $search != "" ? " (`testName` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`taker` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`html` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`browser` ".($search != "" ? " LIKE :SEARCH" : "").") OR (`device` ".($search != "" ? " LIKE :SEARCH" : "").")" : " 1 ") ." AND `fail` = 0
 
 		ORDER BY
 

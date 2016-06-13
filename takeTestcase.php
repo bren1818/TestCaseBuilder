@@ -92,6 +92,8 @@
 	if( $showForm == 1){
 ?>
 <style>
+	
+
 	@-ms-keyframes wiggle{0%{-ms-transform:rotate(3deg);}50%{-ms-transform:rotate(-3deg);}100%{-ms-transform:rotate(3deg);}}
 	@-moz-keyframes wiggle{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
 	@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
@@ -123,9 +125,22 @@ $(function(){
 		window.open( $(this).attr('src') );	
 	});
 });	
+
+function checkform(){
+	var boxes = $('td.result select option:selected[value="Choose"]');
+	console.log(boxes);
+	if( boxes.length == 0 ){
+		return true;
+	}else{
+		window.alert("Ensure all Result options are set to Passed or Failed. If the test does not apply, mark it as passed");
+		return false;
+	}
+}
+
 </script>
 
-<form name="modifyTestcase" id="modifyTestcase" method="POST" action="submitTestcase.php" enctype="multipart/form-data">
+
+<form name="modifyTestcase" id="modifyTestcase" method="POST" action="submitTestcase.php" enctype="multipart/form-data" onsubmit="return checkform()">
 	<div class="formRow">
 		<div class="rowLabel">
 			<label for="tid"><b>Test Case ID:*</b></label>
@@ -237,6 +252,10 @@ $(function(){
 
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script>
+	setTimeout(function(){
+		console.log("did check");
+		
+	},1000);
 /*
 	$(function(){
 		$('#addStep').click(function(event){

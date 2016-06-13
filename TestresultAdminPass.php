@@ -70,9 +70,8 @@
 				"processing": true,
 
 				"serverSide": true,
-				"pageLength": 100,
-
-				"ajax": "ajaxTableTestresult.php",
+"pageLength": 100,
+				"ajax": "ajaxTableTestresultPass.php",
 
 				//"columns" :  [ {"name": "0", "orderable": "true"}, {"name": "1", "orderable": "true"}, {"name": "2", "orderable": "true"}, {"name": "3", "orderable": "true"} ]
 

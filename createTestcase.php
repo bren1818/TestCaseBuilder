@@ -170,7 +170,23 @@ td{ vertical-align: top; }
 <script>
 	var step;
 
-
+setInterval(function(){
+		console.log("did check");
+		$('td.testStep > textarea, td.expectedResult > textarea').each(function(){
+			
+			if( $(this).parent().find(' > .mce-tinymce').length == 0 ){
+				console.log("Init the textarea");
+				console.log( $(this) );
+			
+				var d = new Date();
+				var n = d.getMilliseconds();
+				$(this).attr('id', 'ta_' + n );
+				tinymce.init({ selector: 'textarea#ta_' + n, plugins: ["image paste"], paste_data_images: true });
+			}
+		});	
+	},1000);
+	
+	
 	$(function(){
 		
 		step = $('#Steps .step').length + 1;
@@ -189,13 +205,11 @@ td{ vertical-align: top; }
 					$(this).attr('id', 'ta_' + n );
 					tinymce.init({ selector: 'textarea#ta_' + n, plugins: [
         "image paste"
-       // "searchreplace visualblocks",
-      //  "insertdatetime media contextmenu "
+      
     ],
-   // convert_urls: false,
     paste_data_images: true });
 					
-				});
+				}).addClass("mce");
 				
 				
 			});
@@ -207,7 +221,7 @@ td{ vertical-align: top; }
         "image paste"
     ],
     paste_data_images: true});
-	
+	$('textarea').addClass('mce');
 	
 </script>
 <!--
